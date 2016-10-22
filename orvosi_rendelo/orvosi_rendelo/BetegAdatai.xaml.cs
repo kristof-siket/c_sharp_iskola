@@ -19,9 +19,30 @@ namespace orvosi_rendelo
     /// </summary>
     public partial class BetegAdatai : Window
     {
-        public BetegAdatai()
+        public Beteg UjBeteg { get; set; }
+        public BetegAdatai(bool mod = false)
         {
+            if (mod)
+            {
+                DataContext = ViewModel.Get().KivalasztottBeteg;
+            }
+            else
+            {
+                UjBeteg = new Beteg();
+                DataContext = UjBeteg;
+            }
+
             InitializeComponent();
         }
+
+        private void btn_Save_Clk(object sender, RoutedEventArgs e)
+        {
+            txtNev.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtSzhely.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtTaj.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            dtpSzd.GetBindingExpression(DatePicker.SelectedDateProperty).UpdateSource();
+            this.DialogResult = true;
+        }
+
     }
 }

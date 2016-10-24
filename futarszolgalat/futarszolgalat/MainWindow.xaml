@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:futarszolgalat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Szállítási módok" Height="350" Width="525">
     <Grid>
-        
+        <Label x:Name="label" Content="Válaszd ki a szállítási módot:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="188"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="218" Margin="23,41,0,0" VerticalAlignment="Top" Width="467"/>
+        <Button x:Name="button" Content="Küldemény felvétele..." HorizontalAlignment="Left" Margin="116,275,0,0" VerticalAlignment="Top" Width="273"/>
+
     </Grid>
 </Window>

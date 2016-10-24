@@ -28,7 +28,7 @@ namespace futarszolgalat
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName]string s = "")
         {
-            if (PropertyChanged == null)
+            if (PropertyChanged != null)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs(s));
             }

@@ -31,7 +31,8 @@ namespace futarszolgalat
             return _peldany;
         }
 
-        public ObservableCollection<FutarSzolgaltatas> Szolgaltatasok;
-        public FutarSzolgaltatas KivalasztottSzolgaltatas;
+        public ObservableCollection<FutarSzolgaltatas> Szolgaltatasok { get; set; }
+            
+        public FutarSzolgaltatas KivalasztottSzolgaltatas { get; set; }
     }
 }

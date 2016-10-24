@@ -34,5 +34,7 @@ namespace futarszolgalat
         public ObservableCollection<FutarSzolgaltatas> Szolgaltatasok { get; set; }
             
         public FutarSzolgaltatas KivalasztottSzolgaltatas { get; set; }
+
+        public ObservableCollection<Kuldemeny> Kuldemenyek { get; set; }
     }
 }

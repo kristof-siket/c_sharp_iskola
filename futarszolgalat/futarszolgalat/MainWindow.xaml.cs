@@ -20,8 +20,11 @@ namespace futarszolgalat
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModel VM;
         public MainWindow()
         {
+            VM = ViewModel.Get();
+            DataContext = VM;
             InitializeComponent();
         }
     }

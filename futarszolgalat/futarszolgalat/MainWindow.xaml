@@ -12,9 +12,9 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <Label Content="{Binding Nev}"/>
-                        <Label Content="{Binding SzallitasMinimum}" ContentStringFormat="{}Szállítás minimum(nap): {0}"/>
-                        <Label Content="{Binding SzallitasMaximum}" ContentStringFormat="{}Szállítás maximum(nap): {0}"/>
+                        <Label Content="{Binding Nev}" Background="Gray" Width="525"/>
+                        <Label Content="{Binding MinSzallitasiNap}" ContentStringFormat="{}Szállítás minimum(nap): {0}" />
+                        <Label Content="{Binding MaxSzallitasiNap}" ContentStringFormat="{}Szállítás maximum(nap): {0}"/>
                         <Label Content="{Binding Alapar}" ContentStringFormat="{}Alapár: {0}"/>
                         <Label Content="{Binding GrammAr}" ContentStringFormat="{}Gramm ár:: {0}"/>
                     </StackPanel>

@@ -19,8 +19,12 @@ namespace futarszolgalat
     /// </summary>
     public partial class KuldemenyAdatWindow : Window
     {
+        ViewModel VM = ViewModel.Get();
+        public Kuldemeny UjKuldemeny { get; set; }
         public KuldemenyAdatWindow()
         {
+            UjKuldemeny = new Kuldemeny { Szolgaltatas = VM.KivalasztottSzolgaltatas};
+            DataContext = UjKuldemeny;
             InitializeComponent();
         }
     }

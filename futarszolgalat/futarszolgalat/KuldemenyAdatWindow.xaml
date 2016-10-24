@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="KuldemenyAdatWindow" Height="456.383" Width="609.575">
     <Grid>
+        <Grid.Resources>
+            <local:SulyToSzallitasiModConverter x:Key="STM"/>
+        </Grid.Resources>
         <Label x:Name="label" Content="Név:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="Ország:" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="70"/>
         <Label x:Name="label2" Content="Város:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="54"/>
@@ -22,11 +25,11 @@
         <Button x:Name="button" Content="Mehet!" HorizontalAlignment="Left" Margin="383,169,0,0" VerticalAlignment="Top" Width="135"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="66" Margin="181,196,0,0" VerticalAlignment="Top" Width="197"/>
         <Label x:Name="label6" Content="Súly (gramm):" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" Margin="105,289,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="txtSuly" HorizontalAlignment="Left" Height="23" Margin="105,289,0,0" TextWrapping="Wrap" Text="{Binding Gramm, UpdateSourceTrigger=Explicit}" VerticalAlignment="Top" Width="156"/>
         <Label x:Name="label7" Content="Szállítás módja:" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top" Width="99"/>
-        <Label x:Name="label9" Content="" HorizontalAlignment="Left" Margin="114,317,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9" Content="{Binding Gramm, UpdateSourceTrigger=Explicit, Converter={StaticResource STM}}" HorizontalAlignment="Left" Margin="114,317,0,0" VerticalAlignment="Top" Width="98"/>
         <Label x:Name="label10" Content="Ár:" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label11" Content="" HorizontalAlignment="Left" Margin="114,348,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label11" Content="{Binding Ar, UpdateSourceTrigger=Explicit}"  HorizontalAlignment="Left" Margin="114,348,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
         <Button x:Name="button1" Content="Tárol!" HorizontalAlignment="Left" Margin="229,366,0,0" VerticalAlignment="Top" Width="125" Height="39"/>
 
     </Grid>

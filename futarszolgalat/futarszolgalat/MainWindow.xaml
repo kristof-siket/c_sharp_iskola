@@ -21,7 +21,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="button" Content="Küldemény felvétele..." HorizontalAlignment="Left" Margin="116,275,0,0" VerticalAlignment="Top" Width="273"/>
+        <Button x:Name="button" Content="Küldemény felvétele..." HorizontalAlignment="Left" Margin="116,275,0,0" VerticalAlignment="Top" Width="273" Click="button_Click"/>
 
     </Grid>
 </Window>

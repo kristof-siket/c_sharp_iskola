@@ -27,5 +27,14 @@ namespace futarszolgalat
             DataContext = VM;
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            KuldemenyAdatWindow KAW = new KuldemenyAdatWindow();
+            if (KAW.ShowDialog() == true)
+            {
+                VM.Kuldemenyek.Add(KAW.UjKuldemeny);
+            }
+        }
     }
 }

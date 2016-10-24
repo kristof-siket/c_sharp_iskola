@@ -17,7 +17,7 @@ namespace futarszolgalat
         public string CimzettVaros { get; set; }
         public string CimzettUtcaHazszam { get; set; }
         public string CimzettIrSzam { get; set; }
-        public int Gramm { get { return gramm; } set { gramm = value; OnPropertyChanged(); } }
+        public int Gramm { get { return gramm; } set { gramm = value; OnPropertyChanged("Ar"); } }
         public BindingList<String> Megjegyzesek { get; set; }
         public FutarSzolgaltatas Szolgaltatas { get; set; }
         public int Ar

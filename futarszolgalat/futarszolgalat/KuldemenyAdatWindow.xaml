@@ -25,7 +25,7 @@
         <Button x:Name="button" Content="Mehet!" HorizontalAlignment="Left" Margin="383,169,0,0" VerticalAlignment="Top" Width="135"/>
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="66" Margin="181,196,0,0" VerticalAlignment="Top" Width="197"/>
         <Label x:Name="label6" Content="Súly (gramm):" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="txtSuly" HorizontalAlignment="Left" Height="23" Margin="105,289,0,0" TextWrapping="Wrap" Text="{Binding Gramm, UpdateSourceTrigger=Explicit}" VerticalAlignment="Top" Width="156"/>
+        <TextBox x:Name="txtSuly" HorizontalAlignment="Left" Height="23" Margin="105,289,0,0" TextWrapping="Wrap" Text="{Binding Gramm}" VerticalAlignment="Top" Width="156"/>
         <Label x:Name="label7" Content="Szállítás módja:" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top" Width="99"/>
         <Label x:Name="label9" Content="{Binding Gramm, UpdateSourceTrigger=Explicit, Converter={StaticResource STM}}" HorizontalAlignment="Left" Margin="114,317,0,0" VerticalAlignment="Top" Width="98"/>
         <Label x:Name="label10" Content="Ár:" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top"/>

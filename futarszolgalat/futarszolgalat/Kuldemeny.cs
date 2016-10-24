@@ -20,6 +20,7 @@ namespace futarszolgalat
         public int Ar
         {
             get { return Szolgaltatas.Alapar + (Szolgaltatas.GrammAr * Gramm); }
+            set { Ar = value; }
         }
 
     }

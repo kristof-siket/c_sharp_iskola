@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:orvosi_rendelo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Beteglista" Height="350" Width="525" Background="CornflowerBlue">
     <Grid>
-        
+        <ListBox ItemsSource="{Binding Betegek}" SelectedItem="{Binding KivalasztottBeteg}" x:Name="listBox" HorizontalAlignment="Left" Height="254" Margin="10,45,0,0" VerticalAlignment="Top" Width="258">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Nev}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Click="btn_UjBeteg_Clk" x:Name="button" Content="Új beteg..." FontSize="18" HorizontalAlignment="Left" Margin="273,45,0,0" VerticalAlignment="Top" Width="234" Height="49"/>
+        <Button Click="btn_Mod_Clk" x:Name="button_Copy" Content="Adatok módosítása" FontSize="18" HorizontalAlignment="Left" Margin="273,94,0,0" VerticalAlignment="Top" Width="234" Height="49"/>
+        <Button Click="btn_Kezeles_Clk" x:Name="button_Copy1" Content="Kezelés..." FontSize="18" HorizontalAlignment="Left" Margin="273,170,0,0" VerticalAlignment="Top" Width="234" Height="49"/>
+        <Label x:Name="label" Content="Betegek:" FontSize="20" Foreground="LightCyan" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="95"/>
+
     </Grid>
 </Window>

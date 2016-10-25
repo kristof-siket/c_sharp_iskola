@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,7 @@ namespace futarszolgalat
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            VM.Kuldemenyek = new ObservableCollection<Kuldemeny>();
             KuldemenyAdatWindow KAW = new KuldemenyAdatWindow();
             if (KAW.ShowDialog() == true)
             {

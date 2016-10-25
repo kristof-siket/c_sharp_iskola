@@ -15,22 +15,22 @@
         <Label x:Name="label2" Content="Város:" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="54"/>
         <Label x:Name="label3" Content="Utca/házszám:" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top" Width="99"/>
         <Label x:Name="label4" Content="Irányítószám:" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="90"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="85,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="85,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="85,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186"/>
-        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="105,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186"/>
-        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" Margin="105,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="txtNev" HorizontalAlignment="Left" Height="23" Margin="85,13,0,0" TextWrapping="Wrap" Text="{Binding CimzettNev}" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="txtOrszag" HorizontalAlignment="Left" Height="23" Margin="85,41,0,0" TextWrapping="Wrap" Text="{Binding CimzettOrszag}" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="txtVaros" HorizontalAlignment="Left" Height="23" Margin="85,72,0,0" TextWrapping="Wrap" Text="{Binding CimzettVaros}" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="txtUtcaHazszam" HorizontalAlignment="Left" Height="23" Margin="105,103,0,0" TextWrapping="Wrap" Text="{Binding CimzettUtcaHazszam}" VerticalAlignment="Top" Width="186"/>
+        <TextBox x:Name="txtIrszam" HorizontalAlignment="Left" Height="23" Margin="105,134,0,0" TextWrapping="Wrap" Text="{Binding CimzettIrSzam}" VerticalAlignment="Top" Width="186"/>
         <Label x:Name="label5" Content="Megjegyzések a futárnak:" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top" Width="166"/>
-        <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" Margin="181,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197"/>
-        <Button x:Name="button" Content="Mehet!" HorizontalAlignment="Left" Margin="383,169,0,0" VerticalAlignment="Top" Width="135"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="66" Margin="181,196,0,0" VerticalAlignment="Top" Width="197"/>
+        <TextBox x:Name="txtMegjegyzes" HorizontalAlignment="Left" Height="23" Margin="181,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197"/>
+        <Button Click="btn_Megjegyzes_Click" x:Name="btnMegjegyzes" Content="Mehet!" HorizontalAlignment="Left" Margin="383,169,0,0" VerticalAlignment="Top" Width="135"/>
+        <ListBox x:Name="lstMegjegyzesek" ItemsSource="{Binding Megjegyzesek}" HorizontalAlignment="Left" Height="66" Margin="181,196,0,0" VerticalAlignment="Top" Width="197"/>
         <Label x:Name="label6" Content="Súly (gramm):" HorizontalAlignment="Left" Margin="10,286,0,0" VerticalAlignment="Top" Width="90"/>
         <TextBox x:Name="txtSuly" HorizontalAlignment="Left" Height="23" Margin="105,289,0,0" TextWrapping="Wrap" Text="{Binding Gramm}" VerticalAlignment="Top" Width="156"/>
         <Label x:Name="label7" Content="Szállítás módja:" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top" Width="99"/>
         <Label x:Name="label9" Content="{Binding Gramm, UpdateSourceTrigger=Explicit, Converter={StaticResource STM}}" HorizontalAlignment="Left" Margin="114,317,0,0" VerticalAlignment="Top" Width="98"/>
         <Label x:Name="label10" Content="Ár:" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label11" Content="{Binding Ar, UpdateSourceTrigger=Explicit}"  HorizontalAlignment="Left" Margin="114,348,0,0" VerticalAlignment="Top" Height="26" Width="62"/>
-        <Button x:Name="button1" Content="Tárol!" HorizontalAlignment="Left" Margin="229,366,0,0" VerticalAlignment="Top" Width="125" Height="39"/>
+        <Button Click="btn_Tarol_Click" x:Name="button1" Content="Tárol!" HorizontalAlignment="Left" Margin="229,366,0,0" VerticalAlignment="Top" Width="125" Height="39"/>
 
     </Grid>
 </Window>

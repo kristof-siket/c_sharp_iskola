@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,28 @@ namespace futarszolgalat
     /// </summary>
     public partial class KuldemenyAdatWindow : Window
     {
-        ViewModel VM = ViewModel.Get();
         public Kuldemeny UjKuldemeny { get; set; }
         public KuldemenyAdatWindow()
         {
-            UjKuldemeny = new Kuldemeny { Szolgaltatas = VM.KivalasztottSzolgaltatas};
+            UjKuldemeny = new Kuldemeny { Szolgaltatas = ViewModel.Get().KivalasztottSzolgaltatas, Megjegyzesek=new BindingList<string>() };
             DataContext = UjKuldemeny;
             InitializeComponent();
+        }
+
+        private void btn_Megjegyzes_Click(object sender, RoutedEventArgs e)
+        {
+            UjKuldemeny.Megjegyzesek.Add(txtMegjegyzes.Text);
+            lstMegjegyzesek.GetBindingExpression(ListBox.ItemsSourceProperty).UpdateSource();
+        }
+
+        private void btn_Tarol_Click(object sender, RoutedEventArgs e)
+        {
+            txtNev.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtOrszag.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtVaros.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtIrszam.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            txtUtcaHazszam.GetBindingExpression(TextBox.TextProperty).UpdateSource();
+            this.DialogResult = true;
         }
     }
 }

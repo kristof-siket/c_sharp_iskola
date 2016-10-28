@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:sql_maker"
         mc:Ignorable="d"
+        Closing="felhwindow_closing_handler"
         Title="Felhasználó létrehozása" Height="355.319" Width="417.021">
     <Grid>
         <Label x:Name="label" Content="Felhasználó adatai:" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>

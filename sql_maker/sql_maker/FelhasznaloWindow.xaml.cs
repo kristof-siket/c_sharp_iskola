@@ -30,7 +30,7 @@ namespace sql_maker
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            VM.Query = string.Format("INSERT INTO Felhasznalo values ('{0}', {1}, {2}, {3}, {4}, {5}, {6});\n", txtFelhNev.Text, txtEMail.Text, txtJelszo.Text, txtTeljesNev.Text, txtTelefon.Text, txtLakcim.Text, txtAdmin.Text);
+            VM.Query += string.Format("INSERT INTO Felhasznalo values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}');\n", txtFelhNev.Text, txtEMail.Text, txtJelszo.Text, txtTeljesNev.Text, txtTelefon.Text, txtLakcim.Text, txtAdmin.Text);
             txtAdmin.Text = "";
             txtEMail.Text = "";
             txtFelhNev.Text = "";
@@ -38,6 +38,12 @@ namespace sql_maker
             txtLakcim.Text = "";
             txtTelefon.Text = "";
             txtTeljesNev.Text = "";
+            
+        }
+
+        private void felhwindow_closing_handler(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            VM.FajlbaKiir("add_users.sql");
         }
     }
 }

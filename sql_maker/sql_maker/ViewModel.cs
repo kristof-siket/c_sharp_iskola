@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace sql_maker
 {
-    public enum Tablak { Felhasznalo, Arak, Keszlet, Rendeles} // talán ezzel elegánsabb lenne...
+    public enum Kategoriak { Telefon, Tablet, Laptop, PC, Okosóra, Egyéb}
     public class ViewModel
     {
         private static ViewModel _peldany;
@@ -42,6 +42,11 @@ namespace sql_maker
             StreamWriter sw = new StreamWriter(fajlnev);
             sw.WriteLine(Query);
             sw.Close();
+        }
+
+        public Array OsszesKategoria
+        {
+            get { return Enum.GetValues(typeof(Kategoriak); }
         }
 
     }

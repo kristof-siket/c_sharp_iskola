@@ -1,0 +1,1 @@
+Ezt a programot az Adatbázisok féléves feladatomhoz írom, az egyszerűbb adatbevitel érdekében. Elsőre még elég fapadosan írom meg, de idővel fejlődni fog, egyre jobban betartja a használt design pattern-t is, illetve egyre hatékonyabb lesz.

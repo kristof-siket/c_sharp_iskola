@@ -30,6 +30,10 @@ namespace sql_maker
         private void button_Click(object sender, RoutedEventArgs e)
         {
             VM.Query += string.Format("INSERT INTO Arak values ('{0}', '{1}', '{2}', {3});\n", txtGyarto.Text, txtModell.Text, cmbKateg.SelectedItem.ToString(), txtAr.Text);
+            txtAr.Text = "";
+            txtGyarto.Text = "";
+            txtModell.Text = "";
+            cmbKateg.SelectedItem = null;
         }
 
         private void arak_closing_handler(object sender, System.ComponentModel.CancelEventArgs e)

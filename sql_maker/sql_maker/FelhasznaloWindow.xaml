@@ -15,7 +15,7 @@
         <Label x:Name="label5" Content="Telefon:" HorizontalAlignment="Left" Margin="10,165,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label6" Content="Teljes név:" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label7" Content="Admin-e (Y/N):" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Hozzáad" HorizontalAlignment="Left" Margin="124,284,0,0" VerticalAlignment="Top" Width="158"/>
+        <Button x:Name="button" Content="Hozzáad" HorizontalAlignment="Left" Margin="124,284,0,0" VerticalAlignment="Top" Width="158" Click="button_Click"/>
         <TextBox MaxLength="20" x:Name="txtFelhNev" HorizontalAlignment="Left" Height="23" Margin="108,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="226"/>
         <TextBox MaxLength="20" x:Name="txtJelszo" HorizontalAlignment="Left" Height="23" Margin="62,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206"/>
         <TextBox MaxLength="30" x:Name="txtEMail" HorizontalAlignment="Left" Height="23" Margin="61,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="278"/>

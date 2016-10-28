@@ -37,7 +37,7 @@ namespace sql_maker
 
         public string Query { get; set; }
 
-        public void FajlbaKiir(string query, string fajlnev)
+        public void FajlbaKiir(string fajlnev)
         {
             StreamWriter sw = new StreamWriter(fajlnev);
             sw.WriteLine(Query);

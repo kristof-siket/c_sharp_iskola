@@ -9,7 +9,7 @@
     <Grid Margin="0,0,-8,0">
         <Label x:Name="label" Content="Tábla neve:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="111" Height="27"/>
         <ComboBox ItemsSource="{Binding OsszesTabla}" SelectedItem="{Binding KivalasztottTabla}" x:Name="cmbTablak" HorizontalAlignment="Left" Margin="106,10,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="button" Content="Rekord hozzáadása..." HorizontalAlignment="Left" Margin="55,74,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.643,0.396" Height="33"/>
+        <Button x:Name="button" Content="Rekord hozzáadása..." HorizontalAlignment="Left" Margin="55,74,0,0" VerticalAlignment="Top" Width="146" RenderTransformOrigin="0.643,0.396" Height="33" Click="button_Click"/>
 
     </Grid>
 </Window>

@@ -46,7 +46,7 @@ namespace sql_maker
 
         public Array OsszesKategoria
         {
-            get { return Enum.GetValues(typeof(Kategoriak); }
+            get { return Enum.GetValues(typeof(Kategoriak)); }
         }
 
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,15 @@ namespace sql_maker
 
         public ObservableCollection<string> OsszesTabla { get; set; }
         public string KivalasztottTabla { get; set; }
+
+        public string Query { get; set; }
+
+        public void FajlbaKiir(string query, string fajlnev)
+        {
+            StreamWriter sw = new StreamWriter(fajlnev);
+            sw.WriteLine(Query);
+            sw.Close();
+        }
 
     }
 }
